@@ -8,3 +8,8 @@ html,body{
     height: 100%;
     width: 100%;
 }
+
+:root{
+    --bg-color: #000000 ;
+    --primary-text-color :#dddddd;
+}
