@@ -32,6 +32,11 @@ html{
  --radius-lg: 12px ;
  --radius-xl: 24px;
 }
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 body{
     background-color: var(--bg-color);
@@ -53,6 +58,25 @@ nav button {
     padding: var(--padding-m) var(--padding-xl);
     cursor: pointer;
     border-radius:var(--radius-md) ;
-    
 
+
+}
+section{
+    padding: var(--section-padding);
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: var(--padding-xxl);
+
+}
+section .task-col {
+    background-color: var(--bg-button-color);
+    flex-grow: 1;
+}
+
+section .task-col .heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
