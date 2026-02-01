@@ -23,6 +23,8 @@ html{
     --padding-xl: 20px ;
     --padding-xxl : 30px ;
     --bg-button-color : #1a1a1a;
+    --bg-task-color : #2a2a2a;
+    --delete-color :#952828 ;
     
 
 
@@ -69,9 +71,19 @@ section{
     gap: var(--padding-xxl);
 
 }
+
 section .task-col {
     background-color: var(--bg-button-color);
+    display: flex;
     flex-grow: 1;
+    flex-direction: column;
+    padding: var(--padding-m);
+   border-radius: var(--radius-md);
+transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1)
+}
+section .task-col.hover-over{
+    border: 2px dashed var(--primary-text-color);
+    scale: 1.05;
 }
 
 section .task-col .heading {
@@ -79,4 +91,23 @@ section .task-col .heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+section .task-col .task {
+background-color: var(--bg-task-color);
+ padding: var(--padding-m);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-s);
+    cursor: grab;
+}
+section .task-col .task button {
+    align-self: flex-end;
+    cursor: pointer;
+    padding: var(--padding-s) var(--padding-m);
+    border-radius: var(--radius-sm);
+    border: none;
+    outline: none;
+    background-color: var(--delete-color);
+    color: var(--primary-text-color);
 }
